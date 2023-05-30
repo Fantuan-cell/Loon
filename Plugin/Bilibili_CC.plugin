@@ -1,0 +1,14 @@
+#!name = 哔哩哔哩繁体CC字幕转中文简体[墨鱼版]
+#!desc = 番剧繁体转简体
+#!openUrl = 
+#!author =  @ddgksf2013
+#!homepage = https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/Bilibili_CC.conf
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/BaiduNetDisk.png
+
+
+[Script]
+
+http-response ^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json,script-path=https://github.com/Fantuan-cell/Loon/raw/master/Js/bilibili_cc.js,requires-body=true, timeout=10, tag=哔哩哔哩繁体CC字幕转中文简体
+
+[MITM]
+hostname = aisubtitle.hdslb.com,i0.hdslb.com
