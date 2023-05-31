@@ -1,6 +1,6 @@
 #!name=VIP UNLOCK
 #!desc=一些软件Crack
-#!icon= https://raw.githubusercontent.com/tanmx/Loon/main/images/unlock.png
+#!icon= https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons/Do_Not_Disturb.png
 
 [Script]
 
@@ -12,7 +12,7 @@ http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)
 # ✅ 美图秀秀粉钻
 http-response ^https:\/\/api\.xiuxiu\.meitu\.com\/v1 script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/MeiTu/MTxiuxiu.js, requires-body=true, timeout=60 ,tag=美图秀秀粉钻
 # ✅ 百度网盘会员倍速播放
-http-request ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiDuCloud.js
+http-request ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiDuCloudProCrack.js
 
 # ✅ Picsew滚动截图+解锁订阅
 http-request ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Picsew.js
