@@ -23,30 +23,17 @@ cron "0 0 * * *" script-path=https://github.com/sub-store-org/Sub-Store/releases
 # 🍎YouTube 该插件已足够全面，无需其他规则混用，防止复写规则被破坏。
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/YouTube/YouTube_remove_ads.js, requires-body = true, binary-body-mode = true, tag = YouTube去视频贴片广告
 
-# 🍎美图秀秀vip
-http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/MeiTu/MeiTu.js, requires-body=true, timeout=60 ,tag=美图秀秀会员
-# 🍎美图秀秀粉钻
-http-response ^https:\/\/api\.xiuxiu\.meitu\.com\/v1 script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/MeiTu/MTxiuxiu.js, requires-body=true, timeout=60 ,tag=美图秀秀粉钻
-# 🍎LOON插件仓库
-http-request https?:\/\/xn--ck8h\.com script-path=https://raw.githubusercontent.com/Peng-YM/Loon-Gallery/master/backend/gallery.js, requires-body=true, timeout=120, tag=Loon-Gallery
-# 🍎Nicegram会员
-#https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js
-http-request https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10}  script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/NicegramProCrack.js, timeout=10, tag=Nicegram会员
-# 🍎Spotify会员
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify会员
+
+
+
 # 🍎TF区域限制解除
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/TF_Download.js, tag=TF区域限制解除
 
 # 🍎TestFlight账户管理，自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP.
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
 
-# 🍎百度网盘会员倍速播放
-http-request ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiDuCloud.js
 
-# 🍎Picsew滚动截图+解锁订阅
-http-request ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Picsew.js
-# 🍎解锁Emby premium
-http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=true, script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Emby.js,tag=embyUnlocked
+
 
 
 
@@ -57,6 +44,6 @@ http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDe
 
 
 [MITM]
-hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.googlevideo.com, youtubei.googleapis.com, pan.baidu.com, buy.itunes.apple.com,mb3admin.com
+hostname=sub.store, xn--ck8h.com, restore-access.indream.app, *.googlevideo.com, youtubei.googleapis.com
 
 
