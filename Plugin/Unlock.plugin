@@ -7,33 +7,8 @@
 # ✅ 扫描全能王
 http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?  requires-body=true,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Unlock/CamscannerProCrack.js
 
-http-response https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_去除首页轮播广告和tips
-http-response https?:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_去除会员页广告
-http-response https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_去除会员页顶部广告tab
-http-response https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting  requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-
-# > 酷我音乐_数字专辑
-^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_听书权限接口1
-http-response ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/a\.p requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_听书权限接口2
-http-response ^https?:\/\/.*\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_新版vip接口1
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip\?op=ui requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_新版vip接口2
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/userbase\/vip\?op=get requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_旧版vip接口
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip($|\?op=ui) requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_皮肤解锁
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-# > 酷我音乐_无损下载[限纯净版]
-http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?ui requires-body=true,script-path=https://github.com/ddgksf2013/dev/raw/main/kuwomusic.js
-
 
 
 
 [MITM]
-hostname =ap*.intsig.net, *.kuwo.cn, *.lrts.me
+hostname =ap*.intsig.net
