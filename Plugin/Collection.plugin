@@ -35,8 +35,12 @@ http-request ^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ sc
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify会员
 # 🍎TF区域限制解除
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/TF_Download.js, tag=TF区域限制解除
+
 # 🍎TestFlight账户管理，自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP.
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
+
+# 🍎百度网盘会员倍速播放
+http-request ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiDuCloudProCrack.js
 
 
 
@@ -49,6 +53,6 @@ http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ req
 
 
 [MITM]
-hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.googlevideo.com, youtubei.googleapis.com
+hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.googlevideo.com, youtubei.googleapis.com, pan.baidu.com, 
 
 
