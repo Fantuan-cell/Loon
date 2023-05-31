@@ -1,9 +1,8 @@
 #!name=超级搜索
 #!desc=适用于Safari的超级搜索
-#!author=莫离
-#!homepage=
-#!icon=
-
+#!author=MNY
+#!homepage=https://github.com/Fantuan-cell/Loon/blob/main/Plugin/Search.plugin
+#!icon=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons//Google.png
 
 # 快捷搜索
 # Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
