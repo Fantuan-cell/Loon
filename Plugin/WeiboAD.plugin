@@ -60,7 +60,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timel
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.j
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
 
 
