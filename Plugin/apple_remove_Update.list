@@ -1,0 +1,12 @@
+#!name = 阻止 iOS 系统更新
+#!desc= 屏蔽 iOS 系统更新
+#!author=莫离
+#!homepage=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Plugin/apple_remove_Update.list
+#!icon=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons/Apple.png
+
+
+[Rule]
+DOMAIN,mesu.apple.com,REJECT
+DOMAIN,gdmf.apple.com,REJECT
+DOMAIN,updates-http.cdn-apple.com,REJECT
+DOMAIN,xp.apple.com,REJECT
