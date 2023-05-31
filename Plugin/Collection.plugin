@@ -44,6 +44,6 @@ http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ req
 
 
 [MITM]
-hostname=sub.store, xn--ck8h.com, restore-access.indream.app, *.googlevideo.com, youtubei.googleapis.com
+hostname=sub.store, xn--ck8h.com, restore-access.indream.app, *.googlevideo.com, youtubei.googleapis.com,testflight.apple.com
 
 
