@@ -1,0 +1,76 @@
+#!name=订阅合集
+#!desc=模块合集
+#!author=MNY
+#!homepage=
+#!icon=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons/categorypig.png
+
+[General]
+
+skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,iosapps.itunes.apple.com,*.googlevideo.com, youtubei.googleapis.com,iosapps.itunes.apple.com
+
+
+
+[Script]
+
+# 🍎Sub-Store
+http-request ^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))) script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js, requires-body=true, timeout=120, tag=Sub-Store Core
+http-request https?:\/\/sub\.store script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js, requires-body=true, timeout=120, tag=Sub-Store Simple
+
+cron "0 0 * * *" script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, tag=Sub-Store Sync
+
+
+# 🍎YouTube 改自薯条
+youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
+
+# 🍎美图秀秀vip
+http-response ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/MeiTu/MeiTu.js, requires-body=true, timeout=60 ,tag=美图秀秀会员
+# 🍎美图秀秀粉钻
+http-response ^https:\/\/api\.xiuxiu\.meitu\.com\/v1 script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/MeiTu/MTxiuxiu.js, requires-body=true, timeout=60 ,tag=美图秀秀粉钻
+# 🍎LOON插件仓库
+http-request https?:\/\/xn--ck8h\.com script-path=https://raw.githubusercontent.com/Peng-YM/Loon-Gallery/master/backend/gallery.js, requires-body=true, timeout=120, tag=Loon-Gallery
+# 🍎Nicegram会员
+http-request ^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js, timeout=10, tag=Nicegram会员
+# 🍎Spotify会员
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify会员
+# 🍎TF区域限制解除
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/TF_Download.js, tag=TF区域限制解除
+# 🍎TestFlight账户管理，自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP.
+http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
+# 🍎TK去水印
+http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-pathhttps://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Tiktok.js, requires-body=true, tag=TK去水印
+
+[Rule]
+DOMAIN,p16-tiktokcdn-com.akamaized.net, PROXY
+DOMAIN-SUFFIX,byteoversea.com, PROXY
+DOMAIN-SUFFIX,ibytedtos.com, PROXY
+DOMAIN-SUFFIX,ibyteimg.com, PROXY
+DOMAIN-SUFFIX,ipstatp.com, PROXY
+DOMAIN-SUFFIX,isnssdk.com, PROXY
+DOMAIN-SUFFIX,muscdn.com, PROXY
+DOMAIN-SUFFIX,musical.ly, PROXY
+DOMAIN-SUFFIX,sgpstatp.com, PROXY
+DOMAIN-SUFFIX,snssdk.com, PROXY
+DOMAIN-SUFFIX,tik-tokapi.com, PROXY
+DOMAIN-SUFFIX,tiktok.com, PROXY
+DOMAIN-SUFFIX,tiktokcdn.com, PROXY
+DOMAIN-SUFFIX,tiktokv.com, PROXY
+DOMAIN-KEYWORD,musical.ly, PROXY
+DOMAIN-KEYWORD,tiktok, PROXY
+USER-AGENT,TikTok*, PROXY
+
+
+[Rewrite]
+
+# TIKTOK解锁,日本
+(?<=_region=)CN(?=&) JP 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+
+[Map Local]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt" header="Content-Type: application/vnd.yt-ump"
+
+[MITM]
+hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
+
+
