@@ -8,4 +8,4 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-pat
 
 
 [MITM]
-hostname = app.bilibili.com
+hostname = app.bilibili.com,api.bilibili.com
