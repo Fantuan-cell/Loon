@@ -4,8 +4,8 @@
 
 [Script]
 # 解锁4K画质及1080P高码率 //app.bilibili.com
-http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Bilibili_remove_ads.js, requires-body = true, tag = 画质解锁
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? script-path = https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Bilibili_vip.js, requires-body = true, tag = 画质解锁
 
 
 [MITM]
-hostname = app.bilibili.com, api.bilibili.com
+hostname = app.bilibili.com
