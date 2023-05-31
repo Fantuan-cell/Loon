@@ -37,41 +37,18 @@ http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|u
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/TF_Download.js, tag=TF区域限制解除
 # 🍎TestFlight账户管理，自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP.
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理
-# 🍎TK去水印
-http-response https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite) script-pathhttps://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Tiktok.js, requires-body=true, tag=TK去水印
 
-[Rule]
-DOMAIN,p16-tiktokcdn-com.akamaized.net, PROXY
-DOMAIN-SUFFIX,byteoversea.com, PROXY
-DOMAIN-SUFFIX,ibytedtos.com, PROXY
-DOMAIN-SUFFIX,ibyteimg.com, PROXY
-DOMAIN-SUFFIX,ipstatp.com, PROXY
-DOMAIN-SUFFIX,isnssdk.com, PROXY
-DOMAIN-SUFFIX,muscdn.com, PROXY
-DOMAIN-SUFFIX,musical.ly, PROXY
-DOMAIN-SUFFIX,sgpstatp.com, PROXY
-DOMAIN-SUFFIX,snssdk.com, PROXY
-DOMAIN-SUFFIX,tik-tokapi.com, PROXY
-DOMAIN-SUFFIX,tiktok.com, PROXY
-DOMAIN-SUFFIX,tiktokcdn.com, PROXY
-DOMAIN-SUFFIX,tiktokv.com, PROXY
-DOMAIN-KEYWORD,musical.ly, PROXY
-DOMAIN-KEYWORD,tiktok, PROXY
-USER-AGENT,TikTok*, PROXY
+
+
 
 
 [Rewrite]
 #YouTube去广告,使用reject-img减少开销
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
-# TIKTOK解锁,日本
-(?<=_region=)CN(?=&) JP 307
-(^h.+v5\/)(.+) $1 302
-(?<=&mcc_mnc=)4 2 307
-(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
 
 
 
 [MITM]
-hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com,*.googlevideo.com, youtubei.googleapis.com
+hostname=sub.store,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net,api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, xn--ck8h.com, restore-access.indream.app,spclient.wg.spotify.com, testflight.apple.com,*.googlevideo.com, youtubei.googleapis.com
 
 
