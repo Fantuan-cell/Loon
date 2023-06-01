@@ -7,7 +7,7 @@ http-response ^https:\/\/yeguo\.236api\.com\/v1\/my\/info$  requires-body=true,s
 var body = $response.body;
 var hack = /vip_end_date":\d+/g;
 var name = /nickname":".*?",/g;
-body = body.replace(hack,'vip_end_date":99999999').replace(name,"nickname":"Mny",);
+body = body.replace(hack,'vip_end_date":99999999').replace(name,`nickname":"Mny",`);
 $done({
     body:JSON.stringify(body)
 });
