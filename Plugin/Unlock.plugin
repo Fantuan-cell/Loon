@@ -32,9 +32,10 @@ http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ requires-body=
 
 # ✅ Pillow解锁会员
 http-response https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) requires-body=1 ,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Unlock/pillow.js
-
+# ✅ 外区appstore下载 野果阅读
+http-response ^https:\/\/yeguo\.236api\.com\/v1\/my\/info$  requires-body=true,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/Unlock/YeGuoRead.js
 
 
 [MITM]
-hostname =ap*.intsig.net,*.xiuxiu.meitu.com,api.xiuxiu.meitu.com,mb3admin.com,spclient.wg.spotify.com, buy.itunes.apple.com, pan.baidu.com, api-drive.mypikpak.com,api.revenuecat.com
+hostname =ap*.intsig.net,*.xiuxiu.meitu.com,api.xiuxiu.meitu.com,mb3admin.com,spclient.wg.spotify.com, buy.itunes.apple.com, pan.baidu.com, api-drive.mypikpak.com,api.revenuecat.com,yeguo.236api.com
 
