@@ -7,7 +7,7 @@ obj = {
     "adam_id": 1495046702,
     "app_item_id": 1208145167,
     "bundle_id": "com.sugarmo.ScrollClip",
-    "application_version": "3082",
+    "application_version": "3206",
     "download_id": 8888,
     "version_external_identifier": 0,
     "receipt_creation_date": "2020-09-13 13:07:00 Etc/GMT",
@@ -19,7 +19,7 @@ obj = {
     "original_purchase_date": "2020-05-27 14:46:29 Etc/GMT",
     "original_purchase_date_ms": "1590590789000",
     "original_purchase_date_pst": "2020-05-27 07:46:29 America/Los_Angeles",
-    "original_application_version": "9",
+    "original_application_version": "3206",
     "in_app": []
   },
   "status": 0,
