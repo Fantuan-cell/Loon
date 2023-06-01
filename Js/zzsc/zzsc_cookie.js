@@ -2,7 +2,7 @@
 #loon
 [Script]
 http-request ^
-https:\/\/www\.zztuku\.com\/user-signin\.html  requires-body=true,script-path=http://192.168.2.3:5500/zzsc/zzsc_cookie.js
+https:\/\/www\.zztuku\.com\/user-signin\.html  requires-body=true,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/zzsc/zzsc_cookie.js
 
 [MITM]
 hostname = ztuku.com 
