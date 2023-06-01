@@ -1,9 +1,5 @@
-/* 本脚本，标准版免费，专业版6块，标准版试过，成功购买，专业版请自行测试
-出现问题自行负责，只是测试学习使用，请勿牟利
-自用脚本，学习使用
-#作者：执意
-*/
-console.log($response.body)
+
+console.log($response.body);
 var obj = JSON.parse($response.body);
 obj = {
     "receipt": {
