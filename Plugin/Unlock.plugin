@@ -22,7 +22,7 @@ http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDe
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify会员
 
 # ✅ 百度网盘会员倍速播放 ,@NobyDa
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiduCloud.js
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/BaiDuCloud.js
 
 # ✅ pikpak
 http-response ^https:\/\/api-drive\.mypikpak\.com\/(vip\/v\d\/(vip\/info|allSubscriptionStatus)|drive\/v\d\/about\?space) requires-body=1,script-path=https://raw.githubusercontent.com/Fantuan-cell/Loon/main/Js/PikPak.js
