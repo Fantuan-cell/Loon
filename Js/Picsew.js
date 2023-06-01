@@ -3,6 +3,7 @@
 自用脚本，学习使用
 #作者：执意
 */
+console.log($response.body)
 var obj = JSON.parse($response.body);
 obj = {
     "receipt": {
