@@ -8,6 +8,6 @@ var body = $response.body;
 var hack = /vip_end_date":\d+/g;
 body = body.replace(hack,'vip_end_date":99999999');
 $done({
-    body:JSON.stringify
+    body:JSON.stringify(body)
 });
 
