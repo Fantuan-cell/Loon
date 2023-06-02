@@ -4,7 +4,7 @@ http-response ^https:\/\/yeguo\.236api\.com\/v1\/my\/info$  requires-body=true,s
 
 */
 
-var body = $response.body;;
+var body = $response.body;
 
 var hack = /vip_end_date":\d+/g;
 
