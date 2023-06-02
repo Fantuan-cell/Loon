@@ -1,7 +1,7 @@
 #!name=GetCookies
+#!author=Mny
 #!desc=用于获取Cookie
 #!icon= https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons/cookie.png
-
 [Script] 
 
 #站长素材获取Cookie
