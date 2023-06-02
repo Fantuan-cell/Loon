@@ -1,7 +1,7 @@
 /*
 站长素材每日签到脚本
 
-更新时间: 2023年6月1日21:21:14
+更新时间: 2023年6月2日10:53:46
 
 */
 const date = new Date();
@@ -29,10 +29,17 @@ $httpClient.post(params,function(error, response, data){
         console.log(response.status);
         $notification.post("站长素材每日签到失败","",msg);
         $done();
-    }else{
-        console.log(data);
+    }else if(data.indexOf("<script")!=-1){
+        
+        result = data.match(/Success\('(.*?)'[\s|\S]+msg":"(签到.*?)",/);
+        msg = result[1]+"\n"+result[2];
+        console.log(msg);
+        $notification.post("站长素材每日签到\n","",msg);
+    }
+    else{
         data=JSON.parse(data);
         msg = data["msg"];
+        console.log(msg);
         $notification.post("站长素材每日签到","",msg);
     }
     $done();
