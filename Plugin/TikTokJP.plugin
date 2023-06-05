@@ -1,5 +1,8 @@
 #!name= TikTok日本
+#!desc=TikTok日本
+#!author=MNY
 #!icon= https://raw.githubusercontent.com/Fantuan-cell/Loon/main/icons/TikTok.png
+
 [Rule]
 DOMAIN,p16-tiktokcdn-com.akamaized.net, PROXY
 DOMAIN-SUFFIX,byteoversea.com, PROXY
